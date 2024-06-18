@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Variáveis CSS */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --line-height: 1.5rem;
+  --primary-color: #72bcdf;
+  --secondary-color: #bfdfee;
+  --bg: #fffacc;
+}
+
+/* Resets */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.4s ease-out;
+  border: none;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  background-color: var(--bg);
+}
+
+/* Nav */
+nav,
+#hero {
+  margin: 0 auto;
+  max-width: 1124px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  /* font-size: 2rem; */
+  font-weight: 500;
+}
+
+.title {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 30px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-item {
+  list-style-type: none;
+}
+
+.nav-link {
+  font-weight: var(--bold-font);
+}
+
+a:hover {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#hero {
+  background-image: url(../images/fundo.webp);
+  background-size: cover;
+}
