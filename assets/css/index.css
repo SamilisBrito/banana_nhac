@@ -21,6 +21,7 @@
   border: none;
   text-decoration: none;
   color: var(--primary-color);
+  list-style: none;
 }
 
 html {
@@ -39,7 +40,7 @@ header {
 /* Nav */
 nav,
 #hero,
-#type, #about-us {
+#type, #about-us, #curiosities{
   margin: 0 auto;
   max-width: 1124px;
   padding: 1.25rem;
@@ -68,14 +69,10 @@ nav {
   font-size: 30px;
 }
 
-ul {
+nav ul {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.nav-item {
-  list-style-type: none;
 }
 
 .nav-link {
