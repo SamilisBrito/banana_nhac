@@ -104,8 +104,8 @@ a:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../images/fundo.webp);
   background-size: cover;
-  padding: 1.25rem;
-  height: 550px;
+  padding: 210px  1.25rem 105px 1.25rem;
+  /* height: 550px; */
   justify-content: center;
   gap: 30px;
 }
@@ -140,7 +140,7 @@ a:hover {
 }
 
 #type h2,
-#about-us h2 {
+#about-us h2, #curiosities h2 {
   font-family: "Lobster Two", sans-serif;
   font-size: 40px;
   margin-bottom: 30px;
@@ -234,8 +234,9 @@ iframe {
 .curiosities-li :is(.title, .text) {
   color: var(--white);
 }
-.material-symbols-outlined {
-  color: var(--primary-color);
+
+.animation-content {
+  animation: cu 1s ease-in-out backwards;
 }
 
 .title {
@@ -244,13 +245,19 @@ iframe {
 
 .curiosities-icone {
   background-color: var(--white);
-  width: 50px;
+  max-width: 50px;
   height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px auto;
+}
+
+.number {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 24px;
+  font-weight: var(--bold-font);
 }
 
 .left-button .material-symbols-outlined,
@@ -264,6 +271,16 @@ iframe {
 .left-button,
 .right-button {
   cursor: pointer;
+}
+
+@keyframes cu {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
 }
 
 /* footer */
