@@ -130,7 +130,8 @@ a:hover {
 /* type */
 
 #type,
-#about-us, #curiosities {
+#about-us,
+#curiosities {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -257,6 +258,29 @@ iframe {
   background-color: var(--primary-color);
 }
 
-.left-button, .right-button {
+.left-button,
+.right-button {
   cursor: pointer;
+}
+
+/* footer */
+
+footer {
+  border-top: 4px dashed var(--white);
+  border-radius: 80px;
+  padding: 60px;
+}
+
+footer h2 {
+  font-family: "Lobster Two", sans-serif;
+  font-size: 84px;
+  margin: 30px 0;
+}
+.footer-nav ul {
+  justify-content: space-around;
+}
+
+footer nav li {
+  display: flex;
+  gap: 5px;
 }
