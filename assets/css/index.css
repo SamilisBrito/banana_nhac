@@ -38,14 +38,18 @@ header {
 }
 
 /* Nav */
-nav,
+.header-nav,
 #hero,
-#type, #about-us, #curiosities{
+#type,
+#about-us,
+#curiosities,
+footer {
   margin: 0 auto;
   max-width: 1124px;
   padding: 1.25rem;
 }
-nav {
+
+.header-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,12 +129,14 @@ a:hover {
 
 /* type */
 
-#type, #about-us {
+#type,
+#about-us, #curiosities {
   padding-top: 120px;
-  /* padding-bottom: 120px; */
+  padding-bottom: 120px;
 }
 
-#type h2, #about-us h2{
+#type h2,
+#about-us h2 {
   font-family: "Lobster Two", sans-serif;
   font-size: 40px;
   margin-bottom: 30px;
@@ -147,12 +153,14 @@ a:hover {
   gap: 1rem;
 }
 
-.type-img, .type-button  {
+.type-img,
+.type-button {
   border-radius: 50%;
   background-color: var(--primary-color);
 }
 
-.type-figure:nth-child(odd), .type-button {
+.type-figure:nth-child(odd),
+.type-button {
   animation: icone 3s ease-in-out infinite;
 }
 .type-figure:nth-child(even) {
@@ -173,7 +181,8 @@ a:hover {
 }
 
 @keyframes icone {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -182,12 +191,12 @@ a:hover {
 }
 
 /* about */
-#about-us{
+#about-us {
   border-radius: 10px;
   background-color: var(--primary-color);
 }
 
-#about-us :is(p, h2){
+#about-us :is(p, h2) {
   color: var(--white);
 }
 
@@ -205,4 +214,49 @@ a:hover {
 iframe {
   border-radius: 10px;
   border: 4px dashed var(--white);
+}
+
+/* curiosities */
+
+.curiosities-list {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.curiosities-li :is(.title, .text) {
+  color: var(--white);
+}
+.material-symbols-outlined {
+  color: var(--primary-color);
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.curiosities-icone {
+  background-color: var(--white);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+.left-button .material-symbols-outlined,
+.left-button,
+.right-button .material-symbols-outlined,
+.right-button {
+  color: var(--white);
+  background-color: var(--primary-color);
+}
+
+.left-button, .right-button {
+  cursor: pointer;
 }
