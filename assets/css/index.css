@@ -47,7 +47,7 @@ header {
 #about-us,
 #curiosities,
 #recipes,
-footer {
+#games, footer {
   margin: 0 auto;
   max-width: 1124px;
   padding: 1.25rem;
@@ -136,7 +136,8 @@ a:hover {
 #type,
 #about-us,
 #curiosities,
-#recipes {
+#recipes,
+#games {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -144,7 +145,8 @@ a:hover {
 #type h2,
 #about-us h2,
 #curiosities h2,
-#recipes h2 {
+#recipes h2,
+#games h2 {
   font-family: "Lobster Two", sans-serif;
   font-size: 40px;
   margin-bottom: 30px;
@@ -227,7 +229,8 @@ iframe {
 
 /* curiosities */
 
-#curiosities, #recipes {
+#curiosities,
+#recipes {
   padding-bottom: 0;
 }
 
@@ -316,20 +319,20 @@ footer nav li {
 
 /* recipes */
 
-.recipes-content {
+.recipes-content, .games-content {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
 
-#recipes img {
+#recipes img, #games img {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
-.recipes-content > li {
+.recipes-content > li, .games-content > li {
   border: 4px dashed var(--white);
   border-radius: 10px;
 }
@@ -342,7 +345,6 @@ footer nav li {
 .recipes-info-content {
   padding: 10px;
   display: grid;
-  align-content: stretch;
   gap: 20px;
 }
 
@@ -350,4 +352,8 @@ footer nav li {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.games-content > li h3 {
+  text-align: center;
 }
