@@ -47,7 +47,8 @@ header {
 #about-us,
 #curiosities,
 #recipes,
-#games, footer {
+#games,
+footer {
   margin: 0 auto;
   max-width: 1124px;
   padding: 1.25rem;
@@ -77,14 +78,27 @@ header {
   font-size: 30px;
 }
 
+#btn-mobile {
+  display: none;
+}
+
 nav ul {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover {
+  border-bottom: 2px solid;
 }
 
 .nav-link {
   font-weight: var(--bold-font);
+  padding: 1rem;
 }
 
 a:hover {
@@ -157,6 +171,7 @@ a:hover {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 30px;
+  overflow-x: auto;
 }
 
 .type-figure {
@@ -300,7 +315,7 @@ iframe {
 footer {
   border-top: 4px dashed var(--white);
   border-radius: 80px;
-  padding: 60px;
+  padding: 60px 20px 20px 20px;
 }
 
 footer h2 {
@@ -319,20 +334,23 @@ footer nav li {
 
 /* recipes */
 
-.recipes-content, .games-content {
+.recipes-content,
+.games-content {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
 
-#recipes img, #games img {
+#recipes img,
+#games img {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
-.recipes-content > li, .games-content > li {
+.recipes-content > li,
+.games-content > li {
   border: 4px dashed var(--white);
   border-radius: 10px;
 }
@@ -356,4 +374,51 @@ footer nav li {
 
 .games-content > li h3 {
   text-align: center;
+}
+
+@media (max-width: 834px) {
+
+  .header-nav ul {
+    /* display: none; */
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 105px;
+    left: 0;
+    background-color: var(--bg);
+    transition: 0.6s;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  .header-nav.active ul {
+    height: calc(100vh - 105px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+
+  .header-nav .nav-link {
+    display: block;
+    margin: 0 1rem;
+    border-bottom: 2px dashed var(--white);
+  }
+  .nav-item {
+    border-bottom: none;
+  }
+
+  .nav-item:hover {
+    border-bottom: none;
+    background-color: var(--secondary-color);
+  }
+  #btn-mobile {
+    display: block;
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    font-weight: var(--bold-font);
+    cursor: pointer;
+    border-radius: 45%;
+    background-color: var(--white);
+  }
+
 }
