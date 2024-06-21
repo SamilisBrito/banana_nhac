@@ -46,6 +46,7 @@ header {
 #type,
 #about-us,
 #curiosities,
+#recipes,
 footer {
   margin: 0 auto;
   max-width: 1124px;
@@ -140,7 +141,7 @@ a:hover {
 }
 
 #type h2,
-#about-us h2, #curiosities h2 {
+#about-us h2, #curiosities h2, #recipes h2 {
   font-family: "Lobster Two", sans-serif;
   font-size: 40px;
   margin-bottom: 30px;
@@ -206,7 +207,7 @@ a:hover {
 
 .about-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:  repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
   align-items: center;
 }
@@ -216,6 +217,7 @@ a:hover {
 }
 
 iframe {
+  max-width: 100%;
   border-radius: 10px;
   border: 4px dashed var(--white);
 }
@@ -304,3 +306,16 @@ footer nav li {
   display: flex;
   gap: 5px;
 }
+
+/* recipes */
+
+.recipes-content {
+  display: grid;
+  gap: 20px;
+  grid-template-columns:  repeat(auto-fit, minmax(200px, auto));
+}
+
+#recipes img {
+  max-width: 100%;
+object-fit: cover;
+} 
