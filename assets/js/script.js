@@ -83,6 +83,8 @@ const content = document.querySelector(".curiosities-content");
 const rightButton = document.querySelector(".right-button");
 const leftButton = document.querySelector(".left-button");
 const mobileButton = document.getElementById("btn-mobile");
+const switcher = document.querySelector(".btn");
+
 let clickCounter = 0;
 
 if (content) {
@@ -101,3 +103,13 @@ if (content) {
 } else {
   console.error("Elemento '.curiosities-content' não encontrado.");
 }
+
+switcher.addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+  let className = document.body.className;
+  if (className == 'light-theme') {
+    this.textContent = 'dark_mode';
+  }else {
+    this.textContent = 'light_mode';
+  }
+});

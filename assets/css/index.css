@@ -7,7 +7,9 @@
   --line-height: 1.5rem;
   --primary-color: #72bcdf;
   --secondary-color: #bfdfee;
+  --primary-color-dark: #09415B;
   --bg: #fffacc;
+  --bg-btn: #fffacc;
   --white: #fff;
 }
 
@@ -23,6 +25,22 @@
   color: var(--primary-color);
   list-style: none;
 }
+
+button, a {
+  cursor: pointer;
+}
+
+.light-theme {
+  --btnBg: var(--primary-color-dark);
+  --btnFontColor: var(--white);
+}
+
+.dark-theme {
+  --bg: var(--primary-color-dark);
+  --btnBg: var(--bg-btn);
+  --btnFontColor: var(--primary-color-dark);
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -102,7 +120,6 @@ nav ul {
 }
 
 a:hover {
-  cursor: pointer;
   transition: 0.5s;
 }
 /* hero */
@@ -288,11 +305,6 @@ iframe {
   background-color: var(--primary-color);
 }
 
-.left-button,
-.right-button {
-  cursor: pointer;
-}
-
 @keyframes cu {
   0%,
   100% {
@@ -370,7 +382,26 @@ footer nav li {
   text-align: center;
 }
 
+/* button mode */
+.btn {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: var(--btnBg);
+  color: var(--btnFontColor);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
 @media (max-width: 834px) {
+  .logo img {
+    width: 50px;
+  }
+  .header-nav {
+    height: 70px;
+    padding: 20px;
+  }
+
   #type,
   #about-us,
   #curiosities,
@@ -394,22 +425,21 @@ footer nav li {
   }
 
   .header-nav ul {
-    /* display: none; */
     display: block;
     position: absolute;
     width: 100%;
-    top: 105px;
+    top: 70px;
     left: 0;
-    background-color: var(--bg);
     transition: 0.6s;
     height: 0;
-    visibility: hidden;
+    /* visibility: hidden; */
     overflow-y: hidden;
+    background-color: var(--bg);
   }
 
   .header-nav.active ul {
-    height: calc(100vh - 105px);
-    visibility: visible;
+    height: calc(100vh - 70px);
+    /* visibility: visible; */
     overflow-y: auto;
   }
 
@@ -428,11 +458,10 @@ footer nav li {
   }
   #btn-mobile {
     display: block;
-    padding: 10px 15px;
+    padding: 14px;
     font-size: 1.25rem;
     font-weight: var(--bold-font);
-    cursor: pointer;
-    border-radius: 45%;
+    border-radius: 50%;
     background-color: var(--white);
   }
 }
