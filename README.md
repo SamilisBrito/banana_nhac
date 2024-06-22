@@ -4,6 +4,8 @@
 
 > Desenvolver uma landing page básica utilizando HTML, CSS e JavaScript, seguindo o código iniciado pelo professor.
 
+[Click aqui para acessar landing page](https://samilisbrito.github.io/banana_nhac/)
+
 ## CONTEÚDO MÍNIMO DA LANDING PAGE:
 
 - [x] Dark e ligth mode
