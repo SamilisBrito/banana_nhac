@@ -2,7 +2,7 @@
 
 ![preview](./assets/images/apresentation.png)
 
-> Desenvolver uma landing page simples utilizando HTML, CSS e JavaScript.
+> Desenvolver uma landing page básica utilizando HTML, CSS e JavaScript, seguindo o código iniciado pelo professor.
 
 ## CONTEÚDO MÍNIMO DA LANDING PAGE:
 
