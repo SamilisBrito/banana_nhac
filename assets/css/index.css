@@ -156,11 +156,7 @@ a:hover {
   padding-bottom: 120px;
 }
 
-#type h2,
-#about-us h2,
-#curiosities h2,
-#recipes h2,
-#games h2 {
+h2 {
   font-family: "Lobster Two", sans-serif;
   font-size: 40px;
   margin-bottom: 30px;
@@ -170,7 +166,7 @@ a:hover {
 .type-images {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   overflow-x: auto;
 }
 
@@ -178,14 +174,12 @@ a:hover {
   gap: 1rem;
 }
 
-.type-img,
-.type-button {
+.type-img {
   border-radius: 50%;
   background-color: var(--primary-color);
 }
 
-.type-figure:nth-child(odd),
-.type-button {
+.type-figure:nth-child(odd) {
   animation: icone 3s ease-in-out infinite;
 }
 .type-figure:nth-child(even) {
@@ -196,13 +190,12 @@ a:hover {
   font-weight: var(--bold-font);
 }
 
-.type-button {
-  display: flex;
-  width: 100px;
-  height: 100px;
-  color: var(--white);
-  align-items: center;
-  justify-content: center;
+::-webkit-scrollbar {
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--secondary-color);
 }
 
 @keyframes icone {
@@ -227,7 +220,7 @@ a:hover {
 
 .about-content-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   align-items: center;
 }
@@ -322,6 +315,7 @@ footer h2 {
   font-family: "Lobster Two", sans-serif;
   font-size: 84px;
   margin: 30px 0;
+  text-align: left;
 }
 .footer-nav ul {
   justify-content: space-around;
@@ -377,6 +371,27 @@ footer nav li {
 }
 
 @media (max-width: 834px) {
+  #type,
+  #about-us,
+  #curiosities,
+  #recipes,
+  #games {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  #hero h1, footer h2 {
+    font-size: 40px;
+    line-height: calc(40px * 1.2);
+  }
+
+  h2, .title {
+    font-size: 24px;
+  }
+ 
+  .about-content-grid iframe {
+    margin: 0 auto;
+  }
 
   .header-nav ul {
     /* display: none; */
@@ -420,5 +435,14 @@ footer nav li {
     border-radius: 45%;
     background-color: var(--white);
   }
+}
 
+@media (max-width: 440px) {
+  .about-content-grid iframe {
+    width: 300px;
+    height: 200px;
+  }
+  footer {
+    padding-top: 30px;
+  }
 }
