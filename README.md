@@ -1,4 +1,4 @@
-# Banana Nhac. Desafio do Curso +praTi e Codifica - Dev Full Stack
+# Banana Nhac.
 
 ![preview](./assets/images/apresentation.png)
 
